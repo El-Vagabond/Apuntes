@@ -7,6 +7,7 @@ package hashmapexamen;
 import boxeador.Boxeador;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 import peleas.Peleas;
 
 /**
@@ -84,9 +85,23 @@ public class HashMapExamen {
         boxeoPremium.put("El cateador", diego);
 
         //Recorrer por Clave y Valor
+        /*
         for (String apodo : boxeoPremium.keySet()) {
             System.out.println(apodo + ": " + boxeoPremium.get(apodo).getCategoria());
+        }*/
+        //Comprobar si boxeador ya existe
+        System.out.println(existeboxeo(boxeoPremium));
+    }
+
+    public static boolean existeboxeo(HashMap<String, Boxeador> boxeadores) {
+        Scanner escaner = new Scanner(System.in);
+        System.out.println("Introduce el nombre del boxeadore que comprobar");
+        String nombre = escaner.nextLine();
+        for (String apodo : boxeadores.keySet()) {
+            if (apodo.equals(nombre)) {
+                return true;
+            }
         }
-        System.out.println(ivan.getPelea());
+        return false;
     }
 }
