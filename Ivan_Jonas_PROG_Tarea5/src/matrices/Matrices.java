@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Matrices {
 
     public static void mostrarMatriz(int[][] matriz1, int[][] matriz2) {
-        if (matriz1 == null) {
+        if (matriz1 == null && matriz2 == null) {
             System.out.println("No se puede MOSTRAR una matriz Vacia");
         } else {
             System.out.println("Primera Matriz");
@@ -81,34 +81,37 @@ public class Matrices {
     }
 
     public static void frecuenciaMatriz(int[][] matriz1, int[][] matriz2) {
+        if (matriz1 == null && matriz2 == null) {
+            System.out.println("No pueden estar las matrices nulas");
+        } else {
+            //Inicializamos la variable que contara cuantas veces tiene el numero y otra para guardar el numero preguntado
+            int num = 0;
+            int recuento1 = 0;
+            int recuento2 = 0;
+            //Inicializamos el escaner
 
-        //Inicializamos la variable que contara cuantas veces tiene el numero y otra para guardar el numero preguntado
-        int num = 0;
-        int recuento1 = 0;
-        int recuento2 = 0;
-        //Inicializamos el escaner
+            Scanner escaner = new Scanner(System.in);
 
-        Scanner escaner = new Scanner(System.in);
+            System.out.println("Introduce el numero a comparar la frecuencia");
+            num = escaner.nextInt();
 
-        System.out.println("Introduce el numero a comparar la frecuencia");
-        num = escaner.nextInt();
-
-        for (int i = 0; i < matriz1.length; i++) {
-            for (int j = 0; j < matriz1[0].length; j++) {
-                if (matriz1[i][j] == num) {
-                    recuento1++;
+            for (int i = 0; i < matriz1.length; i++) {
+                for (int j = 0; j < matriz1[0].length; j++) {
+                    if (matriz1[i][j] == num) {
+                        recuento1++;
+                    }
                 }
             }
-        }
 
-        for (int i = 0; i < matriz2.length; i++) {
-            for (int p = 0; p < matriz2[0].length; p++) {
-                if (matriz2[i][p] == num) {
-                    recuento2++;
+            for (int i = 0; i < matriz2.length; i++) {
+                for (int p = 0; p < matriz2[0].length; p++) {
+                    if (matriz2[i][p] == num) {
+                        recuento2++;
+                    }
                 }
             }
-        }
 
-        System.out.println("El numero se ha repetido " + recuento1 + " en la primera matriz y " + recuento2 + " en la segunda matriz");
+            System.out.println("El numero se ha repetido " + recuento1 + " en la primera matriz y " + recuento2 + " en la segunda matriz");
+        }
     }
 }

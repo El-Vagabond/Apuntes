@@ -5,10 +5,13 @@
 package ivan_jonas_prog_tarea5;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import lista.Lista;
+import mapa.Mapa;
 import matrices.Matrices;
+import persona.Persona;
 
 /**
  *
@@ -27,9 +30,10 @@ public class Ivan_Jonas_PROG_Tarea5 {
         // Creamos el hashmap que usaremos y el Arraylist
         //  HashMap<Integer, Persona> mapaivan = new HashMap<>();
         ArrayList<String> lista = new ArrayList<String>();
+        HashMap<Integer, Persona> Mapaivan = new HashMap<Integer, Persona>();
         //Creamos la Persona 
-        // Persona ivan = new Persona("Ivan", 25);
-
+        Persona ivan = new Persona("Ivan", 25,165, "La pulga");
+        Persona luis = new Persona("Luis", 25,185, "El Gigante");
         //Inicializamos el Scanner
         Scanner escaner = new Scanner(System.in);
 
@@ -61,6 +65,37 @@ public class Ivan_Jonas_PROG_Tarea5 {
                         break;
                     case 5:
                         Lista.rellenarLista(lista);
+
+                        break;
+                    case 6:
+                        Lista.ordenarLista(lista);
+
+                        break;
+                    case 7:
+                        Lista.palabraLista(lista);
+
+                        break;
+                    case 8:
+                        Lista.comprobarLista(lista);
+
+                        break;
+
+                    case 9:
+                        Lista.mostrarLista(lista);
+
+                        break;
+
+                    case 10:
+                        Mapa.rellenarMapa(Mapaivan,ivan);
+                        Mapa.rellenarMapa(Mapaivan,luis);
+                        break;
+
+                    case 11:
+                        Mapa.vaciarMapa(Mapaivan);
+
+                        break;
+                    case 12:
+                        Mapa.mostrarMapa(Mapaivan);
 
                         break;
 
