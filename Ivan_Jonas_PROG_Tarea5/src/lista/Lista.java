@@ -17,6 +17,7 @@ import java.util.regex.Pattern;
 public class Lista {
 
     public static void rellenarLista(ArrayList<String> lista) {
+        
         if (lista==null) {
             System.out.println("Primero hay que rellenar la lista");
         } else {

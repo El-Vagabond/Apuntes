@@ -63,7 +63,7 @@ public class HashMapExamen {
         ArrayList<Peleas> pelea3 = new ArrayList<>();
 
         //Creamos lo boxeadores que se pelearan
-        Boxeador ivan = new Boxeador(Boxeador.Categoria.ligero, 25, 165, pelea);
+        Boxeador ivan = new Boxeador(Boxeador.Categoria.medio, 25, 165, pelea);
         Boxeador enzo = new Boxeador(Boxeador.Categoria.ligero, 26, 174, pelea1);
         Boxeador loredo = new Boxeador(Boxeador.Categoria.pesado, 23, 170, pelea2);
         Boxeador diego = new Boxeador(Boxeador.Categoria.pesado, 26, 185, pelea3);
@@ -85,10 +85,10 @@ public class HashMapExamen {
         boxeoPremium.put("El cateador", diego);
 
         //Recorrer por Clave y Valor
-        /*
+       
         for (String apodo : boxeoPremium.keySet()) {
             System.out.println(apodo + ": " + boxeoPremium.get(apodo).getCategoria());
-        }*/
+        }
         //Comprobar si boxeador ya existe
         System.out.println(existeboxeo(boxeoPremium));
     }
@@ -105,3 +105,4 @@ public class HashMapExamen {
         return false;
     }
 }
+

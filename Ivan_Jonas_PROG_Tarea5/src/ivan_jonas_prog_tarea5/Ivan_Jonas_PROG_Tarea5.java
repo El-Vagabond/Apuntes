@@ -26,6 +26,7 @@ public class Ivan_Jonas_PROG_Tarea5 {
         //Creamos las Matrices sobre las que trabajaremos
         int[][] matriz1 = new int[4][4];
         int[][] matriz2 = new int[4][4];
+       HashMap<String, Double> mapaPrecios = new HashMap();
 
         // Creamos el hashmap que usaremos y el Arraylist
         //  HashMap<Integer, Persona> mapaivan = new HashMap<>();

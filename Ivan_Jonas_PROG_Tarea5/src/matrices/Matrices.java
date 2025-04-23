@@ -68,17 +68,21 @@ public class Matrices {
             //Uso la Matriz1 porque se que ambos tienen la misma dimension sino comprobaria si tienen la misma dimension guardando las filas y columnas de cada uno y comparandolas con un if.
             for (int i = 0; i < matriz1.length; i++) {
                 for (int j = 0; j < matriz1[0].length; j++) {
-                    if (matriz1[i][j] == matriz2[i][j]) {
-                        iguales = true;
-                    } else {
+                    if (matriz1[i][j] != matriz2[i][j]) {
                         iguales = false;
+
                     }
                 }
+                iguales=true;
             }
         }
         return iguales;
-
     }
+            
+
+        
+
+    
 
     public static void frecuenciaMatriz(int[][] matriz1, int[][] matriz2) {
         if (matriz1 == null && matriz2 == null) {

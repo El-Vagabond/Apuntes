@@ -22,6 +22,7 @@ public class Boxeador {
         mosca
 
     }
+    
         //Pasamos La categoria por enum , y un arraylist de todo de peleas
     Categoria categoria;
     int edad;

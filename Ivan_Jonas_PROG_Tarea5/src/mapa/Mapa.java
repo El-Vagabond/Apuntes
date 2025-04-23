@@ -14,9 +14,9 @@ import persona.Persona;
 public class Mapa {
 
     public static void rellenarMapa(HashMap<Integer, Persona> mapa, Persona perso) {
-
+int clave = 1;
         //Creamos la variable clave que aumentara en cada interacion y la variable que guardara la persona
-        int clave = 1;
+        
         do {
             mapa.put(clave, perso);
             clave++;
