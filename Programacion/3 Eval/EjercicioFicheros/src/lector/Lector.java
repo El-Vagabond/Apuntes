@@ -81,7 +81,7 @@ public class Lector {
     
     
     //Usando metodos
-     public static int contar(String name, String separador){
+    public static int contar(String name, String separador){
         int contPalabras=0;
         //Crear BufferedReader
         try (BufferedReader lector = new BufferedReader(new FileReader(name))){
