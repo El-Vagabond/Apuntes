@@ -9,5 +9,7 @@ package interfaztruco;
  * @author Vagabond
  */
 public interface InterfazTruco {
+    int obtenerDificultadTruco();
+    void mostrarTruco();
     
 }

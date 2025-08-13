@@ -50,7 +50,7 @@ public class EjercicicioMatrices {
                             System.out.println(" ");
                             System.out.println("La matriz no se ha podido crear");
                             System.out.println(" ");
-                        }
+    }
                         break;
                     case 2:
                         rellenarMatriz(matriz);
