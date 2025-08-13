@@ -134,7 +134,7 @@ public class EjercicicioMatrices {
             for (int i = 0; i < matriz.length; i++) {
                 for (int j = 0; j < matriz[0].length; j++) {
 
-                    matriz[i][j] = ran.nextInt(10, 100);
+                    matriz[i][j] = ran.nextInt(8, 100);
                 }
             }
 
