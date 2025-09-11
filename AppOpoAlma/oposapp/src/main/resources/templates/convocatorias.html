@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Convocatorias</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 24px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid #ddd; vertical-align: top; }
+    .tag { font-size: 12px; padding: 2px 6px; border: 1px solid #aaa; border-radius: 6px; }
+    form { margin: 12px 0 20px; }
+  </style>
+</head>
+<body>
+  <h1>Convocatorias</h1>
+
+  <form method="get">
+    <label>Categoría: </label>
+    <input type="text" name="categoria" th:value="${categoria}" placeholder="Ordenanza">
+    <button type="submit">Filtrar</button>
+    <a href="/convocatorias">Quitar filtro</a>
+  </form>
+
+  <table>
+    <thead>
+      <tr><th>Título</th><th>Categoría</th><th>Publicación</th><th>Límite</th></tr>
+    </thead>
+    <tbody>
+      <tr th:each="c : ${convocatorias}">
+        <td>
+          <a th:href="${c.url}" th:text="${c.titulo}" target="_blank" rel="noopener"></a><br/>
+          <span class="tag" th:text="${c.fuente.nombre}">Fuente</span>
+        </td>
+        <td th:text="${c.categoria}">-</td>
+        <td th:text="${c.fechaPublicacion}">-</td>
+        <td th:text="${c.fechaLimite}">-</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
